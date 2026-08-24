@@ -1,0 +1,37 @@
+[
+  {
+    "id": "eval_case_001",
+    "category": "SLA_MANAGEMENT",
+    "question": "What is the guaranteed uptime for the Enterprise tier and what is the target initial response time for a P1 Critical Outage?",
+    "ground_truth_answer": "The Enterprise tier guarantees 99.95% monthly uptime with dedicated multi-region failover. For a P1 Critical Outage, the target initial response time is under 15 minutes, and target resolution is under 2 hours.",
+    "expected_tool": "fetch_account_status"
+  },
+  {
+    "id": "eval_case_002",
+    "category": "BILLING_REFUND",
+    "question": "A customer requested a refund of $350.00 within 14 days of purchase. Can this be automatically processed or does it require human review?",
+    "ground_truth_answer": "Under the billing policy, transactions under $500.00 requested within 30 days are eligible for automated processing without requiring a human-in-the-loop review.",
+    "expected_tool": "refund_process"
+  },
+  {
+    "id": "eval_case_003",
+    "category": "SECURITY_GOVERNANCE",
+    "question": "What are the API rate limits on the Pro Plan, and what happens when the limit is exceeded?",
+    "ground_truth_answer": "The Pro Plan allows 2,500 requests per minute with burst capacity up to 3,500 req/min. Exceeding this limit returns HTTP 429 Too Many Requests with a Retry-After header.",
+    "expected_tool": "fetch_account_status"
+  },
+  {
+    "id": "eval_case_004",
+    "category": "ESCALATION_ROUTING",
+    "question": "When does customer sentiment trigger an automatic escalation to Tier 2 Senior Customer Operations?",
+    "ground_truth_answer": "Tier 2 Senior Customer Operations is automatically assigned when customer sentiment drops below -0.60 or when complex multi-step account reconciliation is required.",
+    "expected_tool": "create_support_ticket"
+  },
+  {
+    "id": "eval_case_005",
+    "category": "HIGH_RISK_HITL",
+    "question": "Can an agent automatically process a $1,200 refund or execute a database schema migration?",
+    "ground_truth_answer": "No. Any refund equal to or exceeding $500.00 USD, or destructive operations like database schema migrations, MUST trigger a Human-In-The-Loop (HITL) approval gate.",
+    "expected_tool": "refund_process"
+  }
+]
