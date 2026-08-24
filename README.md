@@ -266,5 +266,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## 👤 Author
 
 **Rajith Sundar**  
-- **GitHub:** [@RajithSundar](https://github.com/RajithSundar)  
-- **Role Target:** Agentic AI Developer Intern / Junior Developer at **Clariza.AI**
+- **GitHub:** [@RajithSundar](https://github.com/RajithSundar) 
