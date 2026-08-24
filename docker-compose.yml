@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  agentone:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: agentone_platform
+    ports:
+      - "8000:8000"
+    environment:
+      - APP_NAME=AgentOne Autonomous Engine
+      - APP_ENV=production
+      - DEBUG=false
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEFAULT_LLM_PROVIDER=mock
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+    restart: unless-stopped
